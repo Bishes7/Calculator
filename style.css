@@ -1,0 +1,139 @@
+.crimson-text-regular {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: green;
+  --secondary-color: lightgreen;
+  --tr-color: yellow;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-size: 1.3rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background: radial-gradient(var(--tr-color), var(--primary-color));
+  min-height: 100vh;
+}
+
+.display {
+  background: var(--secondary-color);
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: end;
+  font-weight: bold;
+  box-shadow: 0 10px 5px gray;
+  grid-area: display;
+}
+.calculator .btn {
+  background: var(--tr-color);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 5px gray;
+  border-radius: 10px;
+}
+.calculator .btn:hover {
+  background: var(--secondary-color);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.calculator {
+  background: rgb(191, 190, 190);
+  width: 450px;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "display display display display"
+    "ac c per slash"
+    "btn7 btn8 btn9 star"
+    "btn4 btn5 btn6 minus"
+    "btn1 btn2 btn3 plus"
+    "btn0 dot equal equal";
+  transform: perspective(70rem) rotateX(30deg);
+  animation: moment 0.9s;
+}
+
+.btn-ac {
+  grid-area: ac;
+}
+.btn-c {
+  grid-area: c;
+}
+.btn-per {
+  grid-area: per;
+}
+.btn-slash {
+  grid-area: slash;
+}
+.btn-7 {
+  grid-area: btn7;
+}
+.btn-8 {
+  grid-area: btn8;
+}
+.btn-9 {
+  grid-area: btn9;
+}
+.btn-star {
+  grid-area: star;
+}
+.btn-4 {
+  grid-area: btn4;
+}
+.btn-5 {
+  grid-area: btn5;
+}
+.btn-6 {
+  grid-area: btn6;
+}
+.btn-minus {
+  grid-area: minus;
+}
+.btn-1 {
+  grid-area: btn1;
+}
+.btn-2 {
+  grid-area: btn2;
+}
+.btn-3 {
+  grid-area: btn3;
+}
+.btn-plus {
+  grid-area: plus;
+}
+.btn-0 {
+  grid-area: btn0;
+}
+.btn-dot {
+  grid-area: dot;
+}
+.btn-equal {
+  grid-area: equal;
+}
+
+@keyframes moment {
+  0% {
+    transform: perspective(10rem) rotateX(30deg);
+  }
+  100% {
+    transform: perspective(70rem) rotateX(30deg);
+  }
+}
